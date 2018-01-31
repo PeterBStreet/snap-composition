@@ -6,6 +6,8 @@
  * Time: 8:25 AM
  */
 class Motorcycle {
+	public function brakes() {
+}
 
 	private $year;
 	private $make;
@@ -21,6 +23,18 @@ class Motorcycle {
 	public function getYear() : int {
 			return($this->year);
 		}
+
+class Motorcycle {
+    public function sayHello() {
+        echo 'Hello ';
+    }
+}
+
+trait Abs {
+    public function brakes() {
+        parent::brakes();
+    }
+}
 
 
 	public function getMake() : string {
@@ -40,4 +54,11 @@ class Motorcycle {
 			public function setModel($newModel) {
 			$this->model = ($newModel);
 		}
+
+			public function __construct(int $newYear, string $newMake, string $newModel) {
+			try {
+				$this->setYear($newYear);
+				$this->setMake($newMake);
+				$this->setModel($newModel);
+			}
 
